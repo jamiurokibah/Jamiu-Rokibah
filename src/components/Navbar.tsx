@@ -54,9 +54,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             {BRAND_CONFIG.navLinks.map((link) => {
               const isActive = activeSection === link.id;
               return (
-                <button
+                <a
                   key={link.id}
-                  onClick={() => handleNavClick(link.id)}
+                  href={`#${link.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(link.id);
+                  }}
                   className={`relative py-1 whitespace-nowrap transition-colors duration-200 cursor-pointer ${
                     isActive
                       ? 'text-[#D4AF37] font-semibold'
@@ -67,7 +71,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   {isActive && (
                     <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent rounded-full" />
                   )}
-                </button>
+                </a>
               );
             })}
           </nav>
@@ -127,9 +131,13 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <nav className="flex flex-col space-y-4">
               {BRAND_CONFIG.navLinks.map((link) => (
-                <button
+                <a
                   key={link.id}
-                  onClick={() => handleNavClick(link.id)}
+                  href={`#${link.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(link.id);
+                  }}
                   className={`text-left text-lg font-serif tracking-wide py-2 transition-colors ${
                     activeSection === link.id
                       ? 'text-[#D4AF37] font-bold pl-2 border-l-2 border-[#D4AF37]'
@@ -137,7 +145,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   }`}
                 >
                   {link.name}
-                </button>
+                </a>
               ))}
             </nav>
           </div>

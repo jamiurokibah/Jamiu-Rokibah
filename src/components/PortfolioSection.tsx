@@ -96,6 +96,10 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
                 <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-zinc-950">
                   <img
                     src={item.image}
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = '/images/service_cover_design.jpg';
+                    }}
                     alt={item.title}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out brightness-90 group-hover:brightness-100"

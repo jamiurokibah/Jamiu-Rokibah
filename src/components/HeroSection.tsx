@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrandLogo } from './BrandLogo.tsx';
 import { BRAND_CONFIG } from '../data/brand.ts';
+import { IMAGES } from '../assets/images.ts';
 import { ArrowRight, Sparkles, BookOpen, CheckCircle2, Star } from 'lucide-react';
 
 interface HeroSectionProps {
@@ -104,7 +105,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <div className="absolute inset-0 border border-[#D4AF37]/20 pointer-events-none rounded-xl z-20 m-1" />
               
               <img
-                src="/src/assets/images/hero_books_showcase_1793703020520.jpg"
+                src={IMAGES.heroBooks}
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = '/images/hero_books_showcase.jpg';
+                }}
                 alt="RashReader Premium Hardcover Book Presentation with gold foil typography and interior typesetting"
                 referrerPolicy="no-referrer"
                 className="w-full h-[400px] sm:h-[480px] lg:h-[500px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"

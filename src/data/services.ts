@@ -1,3 +1,5 @@
+import { IMAGES } from '../assets/images.ts';
+
 export interface ServiceItem {
   id: string;
   number: string;
@@ -24,7 +26,7 @@ export const SERVICES: ServiceItem[] = [
       'Get valuable feedback on your manuscript before publication. I provide thoughtful reader insights on plot, characters, pacing, storytelling, readability, and overall reader experience.',
     fullDescription:
       'Before presenting your book to literary agents, publishers, or readers, you need a candid, constructive, and deeply attentive eye. My beta reading service provides in-depth critique from both an avid reader’s perspective and a structural editorial standpoint. You receive a structured editorial report evaluating narrative tension, emotional resonance, plot logic, character arcs, dialogue believability, and world-building consistency.',
-    image: '/src/assets/images/service_beta_reading_1793703021968.jpg',
+    image: IMAGES.betaReading,
     features: [
       'Plot logic & narrative arc assessment',
       'Character motivation & emotional resonance',
@@ -63,7 +65,7 @@ export const SERVICES: ServiceItem[] = [
       'Improve your manuscript with professional editing support. I help refine grammar, spelling, sentence structure, clarity, consistency, and readability while respecting your unique writing voice.',
     fullDescription:
       'Great writing emerges in the editing phase. My professional editing service polishes your prose to literary standards while honoring your unique authorial tone. From syntax cadence, word precision, and tone harmonization to grammar, punctuation, and structural flow, every single line is examined with patient literary care so your manuscript shines with effortless professional caliber.',
-    image: '/src/assets/images/service_book_editing_1793703023000.jpg',
+    image: IMAGES.bookEditing,
     features: [
       'Grammar, punctuation, spelling & syntax perfection',
       'Sentence rhythm, flow, and cadence polishing',
@@ -102,7 +104,7 @@ export const SERVICES: ServiceItem[] = [
       'Make a powerful first impression with attractive, professionally designed book covers that reflect your story, genre, and target audience.',
     fullDescription:
       'Readers judge books by their covers within three seconds. Your cover is your primary sales engine. I craft custom, eye-catching book covers engineered for thumbnail conversion on Amazon Kindle, Apple Books, and physical bookstore shelves. Whether you need an intricate illustrated fantasy cover, a minimalist modern thriller, or a luxury gold-embossed non-fiction jacket, each design is tailored to your exact genre expectations.',
-    image: '/src/assets/images/service_cover_design_1793703023606.jpg',
+    image: IMAGES.coverDesign,
     features: [
       'High-converting eBook thumbnail & full print wraparound (Spine + Back)',
       'Striking custom typography, titling & author brand lockup',
@@ -141,7 +143,7 @@ export const SERVICES: ServiceItem[] = [
       'Give your book greater visibility with creative promotional strategies, marketing graphics, social media content, and promotional materials designed to attract potential readers.',
     fullDescription:
       'Publishing your book is only half the journey; putting it into readers’ hands is the other. My book promotion services equip you with cohesive promotional campaign strategies, eye-catching social media graphics, captivating video teasers, and launch kits designed to capture reader curiosity and drive book sales across TikTok (#BookTok), Instagram (#Bookstagram), Facebook, and email newsletters.',
-    image: '/src/assets/images/service_book_promotion_1793703024904.jpg',
+    image: IMAGES.bookPromotion,
     features: [
       'Strategic launch timelines & multi-channel campaign planning',
       'Custom BookTok / Instagram Reels video promo templates',

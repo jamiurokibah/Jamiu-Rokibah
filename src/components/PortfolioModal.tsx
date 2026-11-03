@@ -64,6 +64,10 @@ export const PortfolioModal: React.FC<PortfolioModalProps> = ({
           <div className="relative rounded-xl overflow-hidden border border-zinc-800 bg-black">
             <img
               src={item.image}
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src = '/images/service_cover_design.jpg';
+              }}
               alt={item.title}
               referrerPolicy="no-referrer"
               className="w-full max-h-[420px] object-cover object-center"

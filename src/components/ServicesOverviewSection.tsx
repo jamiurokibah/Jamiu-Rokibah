@@ -45,6 +45,10 @@ export const ServicesOverviewSection: React.FC<ServicesOverviewSectionProps> = (
                 <div className="relative h-60 sm:h-72 w-full overflow-hidden bg-zinc-950">
                   <img
                     src={service.image}
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = `/images/${service.id.replace(/-/g, '_')}.jpg`;
+                    }}
                     alt={`${service.title} - ${service.subtitle}`}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out brightness-90 group-hover:brightness-100"

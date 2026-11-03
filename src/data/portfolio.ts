@@ -1,3 +1,5 @@
+import { IMAGES } from '../assets/images.ts';
+
 export interface PortfolioItem {
   id: string;
   title: string;
@@ -30,7 +32,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     category: 'Book Cover Design',
     isSample: true,
     sampleLabel: 'Sample Cover Showcase',
-    image: '/src/assets/images/service_cover_design_1793703023606.jpg',
+    image: IMAGES.coverDesign,
     genre: 'Epic Fantasy / Adventure',
     summary:
       'High-impact hardcover book cover with intricate gold foil heraldry, embossed filigree borders, and regal dark navy leather texture.',
@@ -49,7 +51,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     category: 'Book Editing',
     isSample: true,
     sampleLabel: 'Sample Line Editing Comparison',
-    image: '/src/assets/images/service_book_editing_1793703023000.jpg',
+    image: IMAGES.bookEditing,
     genre: 'Literary Suspense / Noir',
     summary:
       'Line-by-line editorial polish eliminating repetitive syntax, strengthening sensory immersion, and tightening character voice while preserving authorial flow.',
@@ -79,7 +81,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     category: 'Beta Reading',
     isSample: true,
     sampleLabel: 'Sample Beta Reader Report',
-    image: '/src/assets/images/service_beta_reading_1793703021968.jpg',
+    image: IMAGES.betaReading,
     genre: 'Psychological Thriller / Mystery',
     summary:
       'In-depth 14-page developmental reader report evaluating plot logic, protagonist empathy, mid-point pacing sag, and climax believability.',
@@ -106,7 +108,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     category: 'Book Promotion',
     isSample: true,
     sampleLabel: 'Sample Promotional Campaign',
-    image: '/src/assets/images/service_book_promotion_1793703024904.jpg',
+    image: IMAGES.bookPromotion,
     genre: 'Historical Fiction / Drama',
     summary:
       'Complete launch week marketing suite: 16 high-converting Instagram/BookTok graphics, teaser video layouts, review quote cards, and author press kit.',
@@ -125,7 +127,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     category: 'Book Cover Design',
     isSample: true,
     sampleLabel: 'Sample Series Typography & Foil Mockup',
-    image: '/src/assets/images/hero_books_showcase_1793703020520.jpg',
+    image: IMAGES.heroBooks,
     genre: 'Literary & Historical Series',
     summary:
       'Harmonized three-volume luxury hardcover book spine and cover presentation with gold foil accents and timeless serif typesetting.',
@@ -144,7 +146,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     category: 'Beta Reading',
     isSample: true,
     sampleLabel: 'Sample Fantasy World Audit',
-    image: '/src/assets/images/service_beta_reading_1793703021968.jpg',
+    image: IMAGES.betaReading,
     genre: 'High Fantasy / World-Building',
     summary:
       'Comprehensive beta audit focusing on internal magic system consistency, linguistic naming conventions, and narrative exposition balance.',

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrandLogo } from './BrandLogo.tsx';
+import { IMAGES } from '../assets/images.ts';
 import { BookOpen, Check, Heart, Feather, Compass, Award } from 'lucide-react';
 
 interface AboutSectionProps {
@@ -129,7 +130,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
               {/* Profile Image (Generated high-res editorial portrait) */}
               <div className="relative aspect-square w-full bg-zinc-950 overflow-hidden">
                 <img
-                  src="/src/assets/images/profile_author_editor_1793703023789.jpg"
+                  src={IMAGES.profileEditor}
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = '/images/profile_author_editor.jpg';
+                  }}
                   alt="RashReader - Literary Consultant & Publishing Strategist"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-top"
