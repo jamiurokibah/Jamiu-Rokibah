@@ -1,0 +1,6 @@
+{
+  "name": "RashReader – Premium Author Services & Publishing Portfolio",
+  "description": "Luxury author services portfolio for RashReader offering expert beta reading, book editing, book cover design, and book promotion for discerning writers and publishers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
